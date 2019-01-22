@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "nl.serviceplanet.rgsp.messages";
+option java_outer_classname = "MathProtos";
+
+package echo.proto;
+
+service MathService {
+
+    rpc multiply (MultiplyReq) returns (MultiplyResp) {}
+
+    rpc multiplySecure (MultiplyReq) returns (MultiplyResp) {}
+}
+
+message MultiplyReq {
+
+    double x = 1;
+    double y = 2;
+
+}
+
+message MultiplyResp {
+
+    double answer = 1;
+
+}
